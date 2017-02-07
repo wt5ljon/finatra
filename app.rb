@@ -11,3 +11,8 @@ get "/:fish_name" do
 	erb :show, layout: :main
 end
 
+post "/" do
+	Fish.create!(params)
+	redirect "/"
+end
+
